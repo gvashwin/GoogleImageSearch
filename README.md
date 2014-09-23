@@ -9,9 +9,13 @@ Note this API is deprecated.
  * Implemented image pan/zoom using this [library](https://github.com/MikeOrtiz/TouchImageView)
 
 ##Completed User Stories
-  * [x] App user can open the app and view the popular or trending photos at that time.
-  * [x] For each photo the actual image, username and caption is displayed.
-  * [x] Relative time stamp of each photo is displayed.
+  * [x] User can enter a search query that will display a grid of image results from the Google Image API
+  * [x] User can click on "settings" which allows selection of advanced search options to filter results
+  * [x]User can configure advanced search filters such as
+   * Size (small, medium, large, extra-large)
+   * Color filter (black, blue, brown, gray, green, etc...)
+   * Type (faces, photo, clip art, line art)
+   * Site (espn.com)
   * [x] App user can see the like count on each popular photo.
   * [x] User's profile pic is also displayed.
   * [x] App user can pull to refresh the photo stream at any point and it will display the popular photos at that time.
