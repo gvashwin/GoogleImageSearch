@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/miSearch"
+        android:showAsAction="ifRoom|collapseActionView"
+        android:actionViewClass="android.widget.SearchView"
+        android:icon="@drawable/ic_search"
+        android:title="Search" >
+    </item>
+     <item
+        android:id="@+id/miSearchPrefs"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/ic_search_prefs"
+        android:onClick="showAdvancedSearchOptions"
+        android:title="Prefereces" >
+    </item>
+</menu>

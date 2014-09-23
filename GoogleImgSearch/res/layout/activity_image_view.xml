@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.codepath.ashwin.googleimgsearch.activites.ImageViewActivity" >
+
+    <ImageView
+        android:id="@+id/ivShareIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_share" />
+
+    <com.ortiz.touch.TouchImageView
+        android:id="@+id/ivFullImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ivShareIcon"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_launcher" />
+
+</RelativeLayout>

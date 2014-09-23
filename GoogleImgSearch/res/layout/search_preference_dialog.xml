@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/tvImgSizeLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/spnrImgSize"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="bottom|left"
+        android:paddingTop="8dp"
+        android:text="Image Size :" />
+
+    <Spinner
+        android:id="@+id/spnrImgSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/tvImgSizeLbl" />
+
+    <TextView
+        android:id="@+id/tvImgColorLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/spnrImgColor"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvImgSizeLbl"
+        android:layout_toLeftOf="@+id/spnrImgSize"
+        android:paddingTop="8dp"
+        android:text="Color Filter :" />
+
+    <Spinner
+        android:id="@+id/spnrImgColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spnrImgSize"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/spnrImgSize" />
+
+    <TextView
+        android:id="@+id/tvImgTypeLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/spnrImgType"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvImgColorLbl"
+        android:paddingTop="8dp"
+        android:text="Image Type :" />
+
+    <Spinner
+        android:id="@+id/spnrImgType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etImgSite"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/spnrImgColor" />
+
+    <TextView
+        android:id="@+id/tvImgSite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/etImgSite"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/tvImgTypeLbl"
+        android:layout_below="@+id/tvImgTypeLbl"
+        android:paddingTop="8dp"
+        android:text="Site :" />
+
+    <EditText
+        android:id="@+id/etImgSite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spnrImgType"
+        android:layout_toRightOf="@+id/tvImgTypeLbl"
+        android:ems="10"
+        android:hint="example.com" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnClearSearchOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/etImgSite"
+        android:layout_below="@+id/etImgSite"
+        android:layout_marginRight="44dp"
+        android:text="Clear" />
+
+    <Button
+        android:id="@+id/btnSavePref"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnClearSearchOptions"
+        android:layout_alignBottom="@+id/btnClearSearchOptions"
+        android:layout_toRightOf="@+id/tvImgSite"
+        android:text="Save" />
+
+</RelativeLayout>
