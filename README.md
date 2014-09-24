@@ -27,3 +27,7 @@ Note this API is deprecated.
   * [x] Used the StaggeredGridView to display and improve the grid of image results.
   * [x] User can zoom or pan images displayed in full-screen detail view.
   * [x] User can clear all the search filters using a single clear button.
+
+##App Demo
+
+![Video Walkthrough - Network Error](GoogleImgSearchDemo-NetworkError.gif)
