@@ -100,6 +100,8 @@ public class SearchActivity extends FragmentActivity implements OnQueryTextListe
         aImage = new ImageAdapter(this,imageList);
         gvImages.setAdapter(aImage);
         client = new AsyncHttpClient();
+		setupItemClickListener();
+		setupOnScrollListener();
     }
 
     
@@ -119,8 +121,7 @@ public class SearchActivity extends FragmentActivity implements OnQueryTextListe
 					"on the top."));
 		}
 		gvImages.setVisibility(View.GONE);
-		setupItemClickListener();
-		//setupOnScrollListener();
+
 		
 	}
 	
@@ -148,8 +149,8 @@ public class SearchActivity extends FragmentActivity implements OnQueryTextListe
 				if(!isNetworkAvailable()) {
 					displayNetworkError();
 				} else {
-					tvWelcomeNote.setVisibility(View.GONE);
-					gvImages.setVisibility(View.VISIBLE);
+					//tvWelcomeNote.setVisibility(View.GONE);
+					//gvImages.setVisibility(View.VISIBLE);
 					fetchImages(false);
 				}
 				
@@ -187,7 +188,6 @@ public class SearchActivity extends FragmentActivity implements OnQueryTextListe
 			searchHistory.add(searchString);
 			tvWelcomeNote.setVisibility(View.GONE);
 			gvImages.setVisibility(View.VISIBLE);
-			setupOnScrollListener();
 			fetchImages(true);
 			
 		}
@@ -207,7 +207,8 @@ public class SearchActivity extends FragmentActivity implements OnQueryTextListe
 		StringBuffer searchUrl;
 		if(newQuery) {
 			startOffset = 0;
-			imageList.clear();
+			aImage.clear();
+			//imageList.clear();
 			aImage.notifyDataSetChanged();
 			
 		}
@@ -233,7 +234,8 @@ public class SearchActivity extends FragmentActivity implements OnQueryTextListe
 					try {
 						imgArray = response.getJSONObject("responseData").getJSONArray("results");
 						ArrayList <Image> debug = Image.fromJsonObject(imgArray);
-						imageList.addAll(debug);
+						//imageList.addAll(debug);
+						aImage.addAll(debug);
 						aImage.notifyDataSetChanged();
 						searchView.setFocusable(false);
 					} catch (JSONException e) {
