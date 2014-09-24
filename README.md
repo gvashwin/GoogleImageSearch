@@ -29,5 +29,8 @@ Note this API is deprecated.
   * [x] User can clear all the search filters using a single clear button.
 
 ##App Demo
+### App Walkthrough Demo
+![Video Walkthrough - App Demo](GoogleImgSearchAppDemo.gif)
 
+### App Walkthrough with Network Error
 ![Video Walkthrough - Network Error](GoogleImgSearchDemo-NetworkError.gif)
